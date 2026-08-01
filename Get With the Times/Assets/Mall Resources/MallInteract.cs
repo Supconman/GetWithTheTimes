@@ -6,6 +6,7 @@ public class MallInteract : MonoBehaviour
 
     public bool debug = false;
     public float cooldownMax = 0.2f;
+    public float interactDisappear = 0.19f;
     float curCooldown = 0.0f;
     bool currentlyActive = false; 
 
@@ -26,7 +27,7 @@ public class MallInteract : MonoBehaviour
             GetComponent<Collider>().enabled = true;
             curCooldown = cooldownMax;
         }
-        else if(currentlyActive) {
+        else if(currentlyActive && curCooldown <= interactDisappear) {
             currentlyActive = false;
             GetComponent<Renderer>().enabled = false;
             GetComponent<Collider>().enabled = false;
