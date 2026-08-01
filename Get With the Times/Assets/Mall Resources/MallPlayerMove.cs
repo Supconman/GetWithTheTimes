@@ -47,5 +47,12 @@ public class MallPlayerMove : MonoBehaviour
                 body.AddRelativeForce(Vector3.right * speed * Time.deltaTime, ForceMode.Acceleration);
             }
         }
+
+        //Failcase for out of bounds.
+        if(transform.position.y < -50.0f) {
+            transform.position = new Vector3(0, 2, 0);
+        }
+
+
     }
 }
