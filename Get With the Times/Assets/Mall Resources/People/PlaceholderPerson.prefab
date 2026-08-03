@@ -127,7 +127,7 @@ Rigidbody:
   m_GameObject: {fileID: 622338647616236261}
   serializedVersion: 5
   m_Mass: 0.7
-  m_LinearDamping: 0.4
+  m_LinearDamping: 0.8
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -254,6 +254,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4855153ec9cbd4099fa216d2f66188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NonSubjectPerson
+  roams: 1
+  homeLocation: {x: 0, y: 0, z: 0}
+  stopMax: 5
+  moveMax: 5
+  roamSpeed: 1
+  roamMaxDist: 4
+  destination: {x: 0, y: 0, z: 0}
+  roamTimer: 0
+  walking: 0
+  hasSprite: 1
 --- !u!1 &8432008942570118383
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +275,6 @@ GameObject:
   - component: {fileID: 2703864600895000022}
   - component: {fileID: 3519481382757986106}
   - component: {fileID: 4108477028924023772}
-  - component: {fileID: 1849279609028235313}
   m_Layer: 0
   m_Name: PersonSprite
   m_TagString: Untagged
@@ -369,16 +378,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1849279609028235313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8432008942570118383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7dad1ee352146342bb3b4779a8eec62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NonSubjectSprite
-  mainCamera: {fileID: 0}

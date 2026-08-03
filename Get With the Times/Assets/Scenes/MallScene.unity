@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20d29a4af2ce4f488e7f35edeacc9be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MallInteract
-  debug: 1
+  debug: 0
   cooldownMax: 0.2
   interactDisappear: 0.19
 --- !u!1 &688434954
@@ -1015,6 +1015,10 @@ PrefabInstance:
     - target: {fileID: 1743966916526947784, guid: 6f566ef9addb76b4e9ba0cb0502377ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071024160816411837, guid: 6f566ef9addb76b4e9ba0cb0502377ea, type: 3}
+      propertyPath: roamSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
