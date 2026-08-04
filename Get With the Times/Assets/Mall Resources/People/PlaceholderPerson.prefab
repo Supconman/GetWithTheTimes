@@ -264,6 +264,8 @@ MonoBehaviour:
   roamTimer: 0
   walking: 0
   hasSprite: 1
+  childSprite: {fileID: 0}
+  speakPitch: 100
 --- !u!1 &8432008942570118383
 GameObject:
   m_ObjectHideFlags: 0
