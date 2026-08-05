@@ -106,6 +106,7 @@ public class NPCBase : MonoBehaviour {
     }
 
     public virtual void roamWalk() {
+
         gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(destination.x - transform.position.x, 0, destination.z - transform.position.z) * roamSpeed*Time.deltaTime,ForceMode.Impulse);
         roamTimer -= Time.deltaTime;
     }
