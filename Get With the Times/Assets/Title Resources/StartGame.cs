@@ -46,7 +46,7 @@ public class StartGame : MonoBehaviour
         if (allowStart && !clickedToStart && Keyboard.current != null) {
             if (Keyboard.current.spaceKey.isPressed || Input.GetMouseButtonDown(0)) {
                 clickedToStart = true;
-                AudioSource.PlayClipAtPoint(cameraSnap, Vector3.zero);
+                AudioSource.PlayClipAtPoint(cameraSnap, new Vector3(0,0,-7));
             }
         }
 
