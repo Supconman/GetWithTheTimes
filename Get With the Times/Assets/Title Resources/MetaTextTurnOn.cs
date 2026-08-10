@@ -7,7 +7,7 @@ public class MetaTextTurnOn : MonoBehaviour
     public float maxIntensity = 1;
     public float appearSpeed = 1;
     float curIntensity = 0; 
-    bool lightUp = false;
+    public bool lightUp = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
