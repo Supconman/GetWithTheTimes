@@ -29,7 +29,7 @@ public class Man : NPCBase {
     public override void interactBehavior(Collider other) {
 
         if (Random.Range(1, 30) <= attempted) {
-            GameObject.Find("Player Collision").transform.position = new Vector3(67670,400,0);
+            GameObject.Find("Player Collision").transform.position = new Vector3(67670,300,0);
             visited = true;
         }
         else {

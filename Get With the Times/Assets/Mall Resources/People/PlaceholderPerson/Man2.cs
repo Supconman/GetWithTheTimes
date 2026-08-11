@@ -12,6 +12,10 @@ public class Man2 : NPCBase {
         NPCInit();
         transform.GetChild(0).gameObject.GetComponent<Animator>().enabled = false;
 
+        if (GlobalManager.globalInstance.egg) {
+            Destroy(gameObject);
+        }
+
     }
 
     // Update is called once per frame
@@ -31,7 +35,8 @@ public class Man2 : NPCBase {
         else if (!recieved) {
             gameObject.GetComponent<Rigidbody>().AddForce((new Vector3(Random.Range(-5000.0f, 5000.0f), Random.Range(10.0f, 10.0f), Random.Range(-5000.0f, 5000.0f))), ForceMode.Impulse);
             gameObject.GetComponent<AudioSource>().Play();
-            recieved = true; 
+            recieved = true;
+            GlobalManager.globalInstance.egg = true; 
         }
         else {
             Destroy(gameObject);

@@ -4,8 +4,9 @@ using UnityEngine;
 public class GlobalManager : MonoBehaviour
 {
 
-    private int day = 0;
-    private Texture battleBackground;
+    public int day = 0;
+    public Texture2D battleBackground;
+    public bool egg = false; 
 
     public static GlobalManager globalInstance;
 

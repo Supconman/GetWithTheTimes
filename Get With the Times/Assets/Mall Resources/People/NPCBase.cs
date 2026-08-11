@@ -1,7 +1,5 @@
-using System.Security.Cryptography;
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
-using UnityEngine.AdaptivePerformance.Provider;
+using System.Collections.Generic;
 
 public class NPCBase : MonoBehaviour {
     //for roaming behavior
@@ -21,7 +19,14 @@ public class NPCBase : MonoBehaviour {
     GameObject mainCamera;
     [HideInInspector] public GameObject childSprite;
 
+    //for making actors only appear on specified days
+    public List<int> daysToAppearOn = new List<int>() { 0, 1, 2, 3, 4, 5 };
+
     public virtual void NPCInit() {
+
+        if (!daysToAppearOn.Contains(GlobalManager.globalInstance.day)) {
+            Destroy(gameObject);
+        }
 
         if (roams) {
             if (homeLocation.Equals(Vector3.zero)) {
