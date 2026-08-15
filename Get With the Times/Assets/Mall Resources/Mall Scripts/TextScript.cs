@@ -46,7 +46,7 @@ public class TextScript : MonoBehaviour
             appearedYet = true;
         }
         else if (appearedYet && curTime >= disappearTime) {
-            if(text.color.a == 0.0f) {
+            if(text.color.a <= 0.0f) {
                 Destroy(gameObject);
             }
             text.color = new Vector4(text.color.r, text.color.g, text.color.b, text.color.a - disappearSpeed * Time.deltaTime);

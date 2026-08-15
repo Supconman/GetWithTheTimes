@@ -19,7 +19,7 @@ public class MallInteract : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame && curCooldown <= 0.0f && !currentlyActive) {
+        if (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Input.GetMouseButtonDown(0)) && curCooldown <= 0.0f && !currentlyActive) {
             currentlyActive = true;
             if (debug) {
                 GetComponent<Renderer>().enabled = true;
