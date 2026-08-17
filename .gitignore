@@ -1,1 +1,5 @@
 Get With the Times/ProjectSettings/EditorBuildSettings.asset
+Get With the Times/.vscode/settings.json
+Get With the Times/.vscode/extensions.json
+Get With the Times/.vscode/launch.json
+*.swp
